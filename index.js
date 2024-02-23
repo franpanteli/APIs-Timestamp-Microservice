@@ -150,12 +150,37 @@ app.get("/api", function (req, res) {
   });
 });
 
+/*
+	The third use of the .get method in this JavaScript document <- the second API endpoint
+		-> Either the user enters something into the timestamp micro service, or they don't 
+			-> If they don't but they still make a get request -> then we return the time in the syntax which the previous 
+          get request handled 
+				-> The server is looking in the directory which we tell it to make that response with 
+		-> Then if they make a get request and they enter something into the micro service 
+			-> That gets sent from the client to the server in the form of a request object 
+			-> The server looks in the apis directory -> which operates by the block of logic which this JavaScript sets out 
+			-> This entire block of code handles get requests for the server, assuming that the request object is not empty 
+				-> The previous block handled get requests assuming that the request object was empty 
+			-> When the request object (containing the repose of the user) reaches the server, the server looks in its api 
+          directory 
+			-> It the contents of the request object contains a time entered by the user into the micro service in Regex syntax, 
+          then the server responds with a JSON object in a specific syntax 
+				-> A JSON object being a JavaScript object 
+			-> If the syntax in the request object isn't in Regex, but it matches one which is set out in this block of code, a 
+          response is still returned 
+			-> Id the syntax of the request object not empty and something has been entered which is not in the typical syntax for
+          a date or time (or both), we return an error message
+			-> If the request object is not empty and does not contain text (e.g if the client using the micro service clicked on 
+            the search field, typed no text, then hit enter) -> in comparison to didn't click on the search field at all (which 
+            which would have been the first get response, not this one)
+			-> So, this is the case where the client makes a get request and sends a request object which is empty -> in which case 
+          return the response object with the date and time in the syntax that we specify  
+		-> We are setting up route handling for HTTP GET requests <- get requests are an HTTP method 
+			-> The date and time which this entire block of code uses follow the syntax for Regex and Unix -> an ISO date pattern 
+			-> The server is reposting with JSON (JavaScript) objects with the standard syntaxes for those dates and times - these 
+          are also referred to as timestamps 
+*/
 
-
-
-
-
-// second API endpoint...
 app.get("/api/:date_string", (req, res) => {
   const dateString = req.params.date_string;
   const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
