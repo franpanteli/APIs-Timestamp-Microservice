@@ -1,0 +1,12 @@
+These are my notes on the project task page. This project is called "Timestamp Microservice." The URL for the page which these notes are on is https://www.freecodecamp.org/learn/back-end-development-and-apis/back-end-development-and-apis-projects/timestamp-microservice
+
+- We are building a full stack JavaScript app:
+	-> We want this to be functionally similar to this -> https://timestamp-microservice.freecodecamp.rocks
+	-> It's an app which tells the time 
+	-> You can include time zone conversion but this is not necessary 
+	-> We are assuming all sent valid dates will be parsed with new Date() as GMT dates
+
+- To write this:
+	-> You clone their GitHub repo -> this is the boilerplate code for the project 
+	-> You can also use their Gitpod starter project
+	-> Or a site builder -> this has to include the files from the project in their GitHub repo  
