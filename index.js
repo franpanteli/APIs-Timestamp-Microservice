@@ -232,6 +232,7 @@ app.get("/api/:date_string", (req, res) => {
 	-> Then once this is done, we are logging it in a message
 	-> We are then telling the server to handle the incoming requests on that port 
 */
+
 app.listen(port, () => {
   console.log("Your app is listening on port " + " " + port);
 });
