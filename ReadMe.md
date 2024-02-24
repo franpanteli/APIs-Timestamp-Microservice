@@ -3,7 +3,7 @@ This repository contains my independent work for a timestamp microservice with J
 
 ## Microservice Installation & Usage
 
-This microservice can be accessed locally. First clone this repository with `git clone https://github.com/franpanteli/APIs-Timestamp-Microservice-Project.git`, navigate to the project directory with `cd`, and install dependencies using `npm install`. Run the server with `npm start` and open the application in a web browser at `http://localhost:3000`.
+This microservice can be installed and ran locally. First clone this repository with `git clone https://github.com/franpanteli/APIs-Timestamp-Microservice-Project.git`, navigate to the project directory with `cd`, and install dependencies using `npm install`. Run the server with `npm start` and open the application in a web browser at `http://localhost:3000`.
 
 ## API Endpoints
 
