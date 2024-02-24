@@ -210,14 +210,28 @@ app.get("/api/:date_string", (req, res) => {
   }
 });
 
+/*
+	Telling the server to listen to a port for requests from the client:
+		-> This section of code uses the Express.js listen method 
+		-> We are starting the server and telling it the name of the port to listen to for requests from the client 
+		-> The number of the port the server is listening to is stored in the variable called port -> the value of this 
+        was set earlier in the code 
+		-> The server is listening to the port -> we are telling it to listen to this 
 
+	The code inside the function:
+		-> The code inside this use of the listen method is telling the console to log a certain message <- this is an 
+        arrow function 
+		-> The server listens to the port - the number of that port is specified above
+		-> Then if the client makes a call to that port, the server picks it up because it's listening 
+		-> In which case, this section of code is telling it which message to log to the console
+		-> This is the message which shows in the terminal when you tell the server (your local computer in this case) to 
+        listen to a certain port 
+			-> After this is done, you can go to the microservice URL in the browser and use the service 
 
-
-
-
-
-
-// listen for requests :)
+	-> We are starting the Express.js server and making it listen on the specified port (`port`)
+	-> Then once this is done, we are logging it in a message
+	-> We are then telling the server to handle the incoming requests on that port 
+*/
 app.listen(port, () => {
   console.log("Your app is listening on port " + " " + port);
 });
