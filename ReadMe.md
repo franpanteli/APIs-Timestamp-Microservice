@@ -10,7 +10,6 @@ This microservice can be installed and run locally. First, clone this repository
 The project defines two main API endpoints. The first, `/api`, responds to a GET request with the current timestamp in both Unix and UTC formats. The second, `/api/:date_string`, handles user-entered date strings, validating the format and responding with Unix and UTC timestamps accordingly. Error handling has also been implemented for invalid date strings.
 
 ## Examples
-<img width="829" alt="Screenshot 2024-03-01 at 20 08 54" src="https://github.com/franpanteli/APIs-Timestamp-Microservice-Project/assets/131474705/0c898178-a3d1-477b-9e85-2bfcafdc90fe">
 
 - To retrieve your current timestamp, visit `http://localhost:3000/api`.
 - To handle a user-entered date (e.g., "2022-03-25"), visit `http://localhost:3000/api/2022-03-25`.
